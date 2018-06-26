@@ -1,16 +1,6 @@
 <template>
-    <div class="default-layout">
-        <top-nav></top-nav>
-        
-        <section class="subheader has-background">
-            <img src="/images/network-bg.svg" alt="" class="is-background">
-            <div class="container">
-                <breadcrumb></breadcrumb>
-            </div>
-        </section>
-
+    <div>
         <nuxt/>
-
         <section class="_section join has-background">
             <img src="/images/network-bg.svg" alt="Volunteers Network" class="is-background__top">
             <div class="container">
@@ -109,14 +99,3 @@
         </section>
     </div>
 </template>
-
-<script>
-import TopNav from "@/components/partials/TopNav";
-import Breadcrumb from "@/components/partials/Breadcrumb";
-export default {
-  components: {
-    TopNav,
-    Breadcrumb
-  }
-};
-</script>

@@ -1,0 +1,133 @@
+/*=============================================
+=            SECTION            =
+=============================================*/
+
+$secondary: #d3d3d3;
+._section {
+    padding: 80px 10px;
+    @media (min-width: $breakpoint) {
+        padding: 80px 0;
+    }
+
+    // &:nth-child(odd) {
+    //     background: #fff;
+    // }
+
+    // &:nth-child(odd) {
+    //     background: $secondary;
+    // }
+
+    &.with-divider {
+        border-bottom: 1px solid $primary;
+    }
+}
+
+
+/* Participation */
+
+.participation {
+    @media (min-width: $breakpoint) {
+        .column:nth-child(1) {
+            position: relative;
+            top: 450px;
+        }
+
+        .column:nth-child(2) {
+            position: relative;
+            top: 250px;
+        }
+    }
+}
+
+/* Latest */
+
+.latest {
+    margin-top: -80px;
+    padding-top: 0;
+}
+
+/* News */
+
+.news {
+    border-top: 1px solid #ebebeb;
+
+    .card {
+        .card-content, .column {
+            padding: 0px;
+        }
+
+        @media (max-width: $breakpoint) {
+            .column:first-child {
+                padding-top: 20px;
+            }
+        }
+
+        .has-background {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 350px;
+        }
+        .has-center-content {
+            padding: 20px;
+        }
+        .media .media-content {
+            position: relative;
+            top: 6px;
+        }
+    }
+}
+
+/* Join */
+
+.join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // @media (min-width: $breakpoint) {
+    //     padding: 150px 0;
+    // }
+}
+
+/* Footer */
+
+.footer {
+    background: #fff;
+    padding-bottom: 0px;
+
+    a {
+        font-size: 14px;
+        color:#888;
+
+        &:hover {
+            color: shade(#888, 40%);
+        }
+    }
+
+    @media (min-width: $breakpoint) {
+        .column {
+            position: relative;
+        }
+
+        .column:not(:last-child):after {
+            content: "";
+            position: absolute;
+            top: 0%;
+            bottom: 0%;
+            right: 20%;
+     
+            border-right: 1px solid #ebebeb;
+        }
+    }
+    
+    footer {
+        background: #FCF4ED;
+        padding: 30px 20px;
+        &.row__medium {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+/*=====  End of SECTION  ======*/

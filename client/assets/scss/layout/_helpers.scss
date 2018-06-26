@@ -1,0 +1,122 @@
+
+/*----------  HELPERS  ----------*/
+.has-background {
+    position: relative;
+
+    .is-background {
+        object-fit: cover;
+        object-position: center center;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+
+        &__top {
+            object-fit: cover;
+            object-position: top center;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        &__bottom {
+            object-fit: cover;
+            object-position: bottom center;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+        }
+    }
+}
+
+.hero .has-background {
+    z-index: -1;
+}
+
+
+.has-overlay {
+    position: relative;
+    .is-overlay {
+        background: linear-gradient(to left,#64999B, #274B5F); // @override
+        opacity: 0.71; // @override
+        object-fit: cover;
+        object-position: center center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+    }
+}
+
+.has-center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.align-middle {
+    display: flex;
+    align-items: center;
+}
+
+.row {
+    margin: 20px 0;
+
+    &__medium {
+        margin: 40px 0;
+    }
+
+    &__large {
+        margin: 80px 0;
+    }
+}
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.measure {
+    max-width: 30rem;
+
+    &__narrow {
+        max-width: 20rem;
+    }
+
+    &__wide {
+        max-width: 40rem;
+    }
+}
+
+.center-columns {
+    align-items: center;
+    justify-content: center;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

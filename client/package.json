@@ -16,7 +16,11 @@
     "@nuxtjs/auth": "4.0.0-rc.3",
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/toast": "^3.0.1",
-    "nuxt": "^1.0.0"
+    "bulma-extensions": "^2.2.1",
+    "node-sass": "^4.9.0",
+    "nuxt": "^1.0.0",
+    "sass-loader": "^7.0.3",
+    "vue-carousel": "^0.8.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

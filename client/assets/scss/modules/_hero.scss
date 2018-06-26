@@ -1,0 +1,51 @@
+/*=============================================
+=            HERO            =
+=============================================*/
+
+.hero--home {
+    @media (min-width: $breakpoint) {
+        height: 80vh !important;
+    }
+
+    .hero-head {
+        
+    }
+
+    .hero-body {
+        display: flex;
+        align-self: center;
+
+        .container  {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    .title {
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .button {
+       font-size: 14px;
+       padding: 20px;
+    }
+
+    .scroll {
+        position: relative;
+        z-index: 1;
+        bottom: 15px;
+
+        img {
+            height: 18px;
+
+        }
+    }
+}
+
+/*=====  End of FOOTER  ======*/

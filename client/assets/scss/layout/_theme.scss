@@ -1,0 +1,127 @@
+/*=============================================
+=            DEFAULT THEME            =
+=============================================*/
+$breakpoint: 768px;
+$primary-dark: #274B5F;
+$primary: #64999B;
+
+body {
+    font: 400 16px/1.5 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1.title {}
+h2.title {
+    font-size: 36px;
+    letter-spacing: -.9px;
+    line-height: 1.44;
+    margin-bottom: 64px !important;
+    text-align: center;
+    color: $primary;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__divider {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background: tint($primary, 50%);        
+        }
+        &:before {
+            left: calc(50% - 320px);
+            width: 150px;
+        }
+        &:after {
+            right: calc(50% - 320px);
+            width: 150px;
+        }
+    }
+}
+h3.title {
+    font-size: 20px;
+    line-height: 1.5;
+    color: $primary-dark;
+}
+
+.button:not(.default) {
+    font-size: 14px;
+    padding: 20px;
+}
+
+$secondary: #ED7E5D;
+.is-theme {
+    background-color: $secondary;
+    border-color: $secondary;
+    color: tint($secondary, 90%);
+
+    &:hover {
+        background-color: shade($secondary, 10%);
+        border-color: $secondary;
+        color: tint($secondary, 90%);
+    }
+
+    &.is-outlined {
+        color: $secondary;
+        background-color: transparent;
+        border-color: $secondary;
+
+        &:hover {
+            color: tint($secondary, 90%);
+            background-color: $secondary;
+            border-color: $secondary;
+        }
+    }    
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: shade($primary-dark, 20%);
+
+    &.lead {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: $breakpoint) {
+    p {
+        line-height: 1.6;
+    }
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: rgba(#745050, 0.16) 0 3px 20px;
+
+    h3 {
+        font-size: 16px;
+    }
+}
+
+a {
+    color: #1FA4D5;
+    font-size: 16px;
+}
+
+.default-layout {
+    padding-top: 50px;
+
+    @media (min-width: $breakpoint) {
+        padding-top: 50px;
+    }
+}
+
+.subheader {
+    padding: 20px 10px;
+
+    @media (min-width: $breakpoint) {
+        padding: 30px 0px;
+    }
+}

@@ -1,0 +1,119 @@
+/*=============================================
+=            NAVBAR            =
+=============================================*/
+$nav-text-color: rgba(255, 255, 255, 0.8);
+.navbar {
+
+    &.headroom {
+        will-change: all;
+        transition: all 200ms linear;
+    }
+
+    //navbar views
+    &.default {
+        background: $primary;
+        .virtual {display: none;}
+    }
+
+    &.landing {
+        @media (min-width: $breakpoint) {
+            top: 20px;
+        }
+    }
+
+    &.headroom--top {
+
+        @media (min-width: $breakpoint) {
+            .container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .has-dropdown, .has-button{
+                display: none;
+            }
+        }
+    }
+
+    &.headroom--not-top {
+        background: $primary;
+        top: 0px;
+
+        .virtual {
+            display: none;
+        }
+    }
+
+    @media (max-width: $breakpoint) {
+        .virtual {
+            display: none;
+        }
+    }
+
+    .navbar-item:not(.has-dropdown), .navbar-link {
+        color: $nav-text-color;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+
+        &.is-active {
+            position: relative;
+            &:after {
+                content: "";
+                height: 2px;
+                background: $nav-text-color;
+                left: 0;
+                right: 0;
+                bottom: 0px;
+                width: 60%;
+                margin: 0 auto;
+                position: absolute;
+            }
+        }
+
+        &:hover {
+            // color: shade($nav-text-color, 50%);
+            color: #333;
+        }
+    }
+
+    .navbar-link::after {
+       border-color: $nav-text-color;
+    }
+
+    .navbar-dropdown {
+        background: shade($nav-text-color, 10%);
+        border: none;
+        @media (min-width: $breakpoint) {
+            background: $primary;
+        }
+        
+        .navbar-item {
+            &:hover {
+                color: shade($nav-text-color, 50%);
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint) {
+        .navbar-item:not(.has-dropdown), .navbar-link {
+            color: shade($secondary, 50%);
+
+            &.is-active {
+                background: $secondary;
+                color: #fff;
+                &:after {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                color: shade($nav-text-color, 50%);
+            }
+        }        
+    }
+}
+
+/*=====  End of NAVBAR  ======*/
