@@ -18,22 +18,22 @@
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a href="" class="navbar-link">EXPLORE</a>
                         <div class="navbar-dropdown">
-                            <a href="#" class="navbar-item">PROJECTS</a>
-                            <a href="#" class="navbar-item">BLOG</a>
-                            <a href="#" class="navbar-item">PRESS</a>
-                            <a href="#" class="navbar-item">CAMPAIGNS</a>
-                            <a href="#" class="navbar-item">VIDEOS</a>
+                            <nuxt-link to="/projects" class="navbar-item">PROJECTS</nuxt-link>
+                            <nuxt-link to="/blog" class="navbar-item">BLOG</nuxt-link>
+                            <nuxt-link to="/press" class="navbar-item">PRESS</nuxt-link>
+                            <nuxt-link to="/campaigns" class="navbar-item">CAMPAIGNS</nuxt-link>
+                            <nuxt-link to="/videos" class="navbar-item">VIDEOS</nuxt-link>
                         </div>
                     </div>
-                    <nuxt-link to="" class="navbar-item virtual">PROJECTS</nuxt-link>
-                    <nuxt-link to="" class="navbar-item virtual">BLOG</nuxt-link>
-                    <nuxt-link to="" class="navbar-item virtual">PRESS</nuxt-link>
-                    <nuxt-link to="" class="navbar-item virtual">CAMPAIGNS</nuxt-link>
-                    <nuxt-link to="" class="navbar-item virtual">VIDEOS</nuxt-link>
-                    <nuxt-link to="" class="navbar-item">STORE</nuxt-link>
+                    <nuxt-link to="/projects" class="navbar-item virtual">PROJECTS</nuxt-link>
+                    <nuxt-link to="/blog" class="navbar-item virtual">BLOG</nuxt-link>
+                    <nuxt-link to="/press" class="navbar-item virtual">PRESS</nuxt-link>
+                    <nuxt-link to="/campaigns" class="navbar-item virtual">CAMPAIGNS</nuxt-link>
+                    <nuxt-link to="/videos" class="navbar-item virtual">VIDEOS</nuxt-link>
+                    <nuxt-link to="/store" class="navbar-item">STORE</nuxt-link>
                     <div class="navbar-item has-button">
                         <p class="control">
-                            <a href="#" class="button is-theme">DONATE</a>
+                            <nuxt-link to="/donate" class="button is-theme">DONATE</nuxt-link>
                         </p>
                     </div>
                     <!-- <nuxt-link to="" class="navbar-item">

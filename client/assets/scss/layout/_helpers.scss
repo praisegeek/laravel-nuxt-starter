@@ -91,7 +91,7 @@
     }
 }
 
-.avatar {
+.avatar, .with-avatar {
     border-radius: 50%;
     overflow: hidden;
 }
@@ -119,4 +119,58 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.with-search-input {
+    $input-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+
+    &.with-radius {
+        border-radius: 5px;
+    }
+
+    &.with-border {
+        border: 1px solid shade($input-color, 50);
+    }
+
+    .icon {
+
+    }
+
+    > input {
+        background: transparent;
+        border-color: transparent;
+        color: $input-color, 50;
+        &::placeholder {
+            color: shade($input-color, 50);
+        }
+
+        &:enabled {
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    > * {
+        font-size: 14px;
+    }
+}
+
+.with-notification {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $secondary;
+    }
 }

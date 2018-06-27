@@ -46,7 +46,7 @@ export default {
       this.$router.push(link);
     },
     updateList() {
-      this.breadcrumbList = this.$route.matched[0].path.split("/");
+      this.breadcrumbList = this.$route.path.split("/");
     }
   }
 };

@@ -2,7 +2,9 @@
 =            MODULES            =
 =============================================*/
 
+@import '@/node_modules/bulma-extensions/bulma-accordion/dist/css/bulma-accordion.min.css';
 @import 'navbar';
+@import 'dashboard';
 @import 'hero';
 @import 'section';
 

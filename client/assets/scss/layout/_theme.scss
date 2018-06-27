@@ -114,14 +114,24 @@ a {
     padding-top: 50px;
 
     @media (min-width: $breakpoint) {
-        padding-top: 50px;
+        padding-top: 55px;
     }
 }
 
 .subheader {
     padding: 20px 10px;
+    background: #333;
+
+    .breadcrumb li a {
+        font-size: 14px;
+        color: $secondary;
+    }
+    
+    .breadcrumb li.is-active a {
+        color: #fff;
+    }
 
     @media (min-width: $breakpoint) {
-        padding: 30px 0px;
+        padding: 20px 0px;
     }
 }

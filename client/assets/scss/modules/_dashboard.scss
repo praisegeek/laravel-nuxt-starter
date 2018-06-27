@@ -1,0 +1,126 @@
+/*=============================================
+=            DASHBOARD            =
+=============================================*/
+
+$dashboard-navbar-bg: $primary; //#34495E;
+$font-family: 'Ubuntu', sans-serif;
+$dashboard-bg: #d1d1d1;
+$sidebar-bg: $primary-dark; //#303E4E;
+$nav-fake-height: 64px;
+
+/* Navbar */
+.dashboard-navbar {
+    background: rgba($dashboard-navbar-bg, 0.94);
+
+    .navbar-brand {
+        width: 50px;
+        @media (min-width: $breakpoint) {
+            width: 150px;
+        }   
+    }
+    .navbar-start {
+        .navbar-item {
+            color: rgba(#fff, 0.6);
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    .navbar-item:hover, 
+    .has-dropdown:hover .navbar-link {
+        background: $primary !important;
+    }
+} 
+
+
+/* dashboard body */
+.dashboard-body {
+    background: $dashboard-bg;
+
+    &__sidebar {
+        background: $sidebar-bg;
+        padding-top: $nav-fake-height;
+        max-width: 200px;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .menu {
+            .with-search-input {
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                height: 50px;
+                
+                > * {
+                    color: shade(#fff, 20%);
+                }
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+
+            .menu-label {
+                color: shade(#fff, 30%);
+            }
+
+            span {
+                color: shade(#fff, 30%);
+                font-size: 14px;
+            }
+
+            span.icon {
+                margin-right: 5px;
+            }
+        }
+
+        .menu-footer {
+            padding-top: 10px;
+            border-top: 1px solid shade(#fff, 30%);
+            .icon, a {
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__content {
+        padding-top: $nav-fake-height;
+        
+        .breadcrumb li a {
+            font-size: 14px;
+            color: $secondary;
+        }
+
+        .breadcrumb li.is-active a {
+            color: tint(#555, 60%);
+        }
+
+    }
+}
+
+
+/* Dashboard Subheader */
+.dashboard-subheader {
+    z-index: 29;
+}
+
+/* Dashboard Icons */
+.dashboard-icons {
+    border: 1px solid shade(#FFF, 10%);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: rgba(#00173C, 0.4);
+}
+
+/* Dashboard Buttons */
+.dashboard-buttons {
+    border: 1px solid shade(#FFF, 10%);
+    border-radius: 20px;
+    height: 32px;
+    color: rgba(#00173C, 0.4);
+}
+

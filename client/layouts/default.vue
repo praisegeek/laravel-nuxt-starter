@@ -3,7 +3,7 @@
         <top-nav></top-nav>
         
         <section class="subheader has-background">
-            <img src="/images/network-bg.svg" alt="" class="is-background">
+            <!-- <img src="/images/network-bg.svg" alt="" class="is-background"> -->
             <div class="container">
                 <breadcrumb></breadcrumb>
             </div>

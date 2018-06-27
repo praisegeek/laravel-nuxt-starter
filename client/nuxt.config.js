@@ -10,7 +10,8 @@ module.exports = {
             { hid: 'description', name: 'description', content: 'Nuxt.js project' }
         ],
         script: [
-            { src: 'https://npmcdn.com/headroom.js@0.9.4/dist/headroom.min.js' }
+            { src: 'https://npmcdn.com/headroom.js@0.9.4/dist/headroom.min.js' },
+            { src: 'https://cdn.jsdelivr.net/npm/bulma-extensions@2.2.1/dist/js/bulma-extensions.min.js', integrity: "sha256-GKBVbyTU0cwZzeBVLyjQE79ktHL9+Rn1gpDwfX/PoAo=", crossorigin: "anonymous" },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -27,7 +28,7 @@ module.exports = {
     modules: [
         '@nuxtjs/axios',
         '@nuxtjs/auth',
-        '@nuxtjs/toast'
+        '@nuxtjs/toast',
     ],
 
     router: {
