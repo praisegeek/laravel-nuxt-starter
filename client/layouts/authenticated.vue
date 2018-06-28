@@ -54,71 +54,84 @@
 
         <section class="dashboard-body">
             <div class="columns is-variable is-0 is-mobile">
-                <div class="column dashboard-body__sidebar" :class="{'collapsed': collapsed}">
-                    <aside>
-                        <div class="menu">
-                            <div class="with-search-input with-border">
-                                <span class="icon">
-                                    <i class="fa fa-search"></i>
-                                </span>
-                                <input type="text" class="input" placeholder="Quick search...">
-                            </div>
-                            <p class="menu-label">
-                                Manage
-                            </p>
-                            <ul class="menu-list">
-                                <li>
-                                    <nuxt-link to="http://">
-                                        <span class="icon">
-                                            <i class="fa fa-user"></i>
-                                        </span>
-                                        <span>Profile</span>
-                                    </nuxt-link>
-                                </li>
-                            </ul>
-
-                            <p class="menu-label">
-                                Admin
-                            </p>
-                            <ul class="menu-list">
-                                <li>
-                                    <nuxt-link to="http://">
-                                        <span class="icon">
-                                            <i class="fa fa-map"></i>
-                                        </span>
-                                        <span>Schedules</span>
-                                    </nuxt-link>
-                                </li>
-                                <li>
-                                    <nuxt-link to="http://">
-                                        <span class="icon">
-                                            <i class="fa fa-hand-rock"></i>
-                                        </span>
-                                        <span>Permissions</span>
-                                    </nuxt-link>
-                                </li>
-                                <li>
-                                    <nuxt-link to="http://">
-                                        <span class="icon">
-                                            <i class="fa fa-rocket"></i>
-                                        </span>
-                                        <span>Export CSV</span>
-                                    </nuxt-link>
-                                </li>
-                                
-                            </ul>
+                <aside class="column dashboard-body__sidebar" :class="{'collapsed': collapsed}">
+                    
+                    <div class="menu">
+                        <div class="with-search-input with-border">
+                            <span class="icon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                            <input type="text" class="input" placeholder="Quick search...">
                         </div>
 
-                        <div class="menu-footer">
-                            <div class="has-text-centered">
-                                <!-- <a href="">Logout</a> -->
-                                <a class="icon" @click.prevent="collapse">
-                                    <i class="fa" :class="{'fa-chevron-right': collapsed, 'fa-chevron-left' : !collapsed}"></i>
-                                </a>
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48 with-avatar">
+                                    <img src="/images/avatar8.jpg" alt="Avatar">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <h3 class="has-text-white">{{ user.displayName }}</h3>
+                                <span>Editor</span>
                             </div>
                         </div>
-                    </aside>
-                </div>
+
+                        <p class="menu-label">
+                            Manage
+                        </p>
+                        <ul class="menu-list">
+                            <li>
+                                <nuxt-link to="http://">
+                                    <span class="icon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span>Profile</span>
+                                </nuxt-link>
+                            </li>
+                        </ul>
+
+                        <p class="menu-label">
+                            Admin
+                        </p>
+                        <ul class="menu-list">
+                            <li>
+                                <nuxt-link to="http://">
+                                    <span class="icon">
+                                        <i class="fa fa-map"></i>
+                                    </span>
+                                    <span>Schedules</span>
+                                </nuxt-link>
+                            </li>
+                            <li>
+                                <nuxt-link to="http://">
+                                    <span class="icon">
+                                        <i class="fa fa-hand-rock"></i>
+                                    </span>
+                                    <span>Permissions</span>
+                                </nuxt-link>
+                            </li>
+                            <li>
+                                <nuxt-link to="http://">
+                                    <span class="icon">
+                                        <i class="fa fa-rocket"></i>
+                                    </span>
+                                    <span>Export CSV</span>
+                                </nuxt-link>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="menu-footer">
+                        <div class="has-text-centered">
+                            <!-- <a href="">Logout</a> -->
+                            <a class="icon" @click.prevent="collapse">
+                                <i class="fa" :class="{'fa-chevron-right': collapsed, 'fa-chevron-left' : !collapsed}"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </aside>
                 <div class="column dashboard-body__content">
                     <nuxt></nuxt>
                 </div>
