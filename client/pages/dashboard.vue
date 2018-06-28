@@ -15,18 +15,19 @@
                             <breadcrumb></breadcrumb>
                         </div>
                     </div>
-                    <div class="navbar-end has-divider">
-                        <!-- <div class="navbar-item">
-                            <div class="notification is-warning">
-                                <button class="delete"></button>
-                                <div class="level">
-                                    <div class="level-item icon">
-                                        <i class="fa fa-flag"></i>
+                    <div class="navbar-end with-divider">
+                        <div class="navbar-item">
+                            <div class="message is-danger is-small">
+                                <div class="message-body is-paddingless">
+                                    <div class="level">
+                                        <div class="level-item icon">
+                                            <i class="fa fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="level-item">You have pending reports</div>
                                     </div>
-                                    <p class="level-item">New Post Added!</p>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         <nuxt-link to="#" class="navbar-item has-text-dark">
                             <span class="icon dashboard-icons">
                                 <i class="fa fa-flag"></i>
@@ -42,10 +43,12 @@
             </div>
         </nav>
         
-        <div class="block">
-            <p>Welcome back {{ user.displayName }}</p>
+        <div class="row">
+            <article class="box is-shadowless">
+                <p>Welcome back {{ user.displayName }}</p>
 
-            <a href="#" @click.prevent="logout">Sign Out | {{ user.displayName }}</a>
+                <a href="#" @click.prevent="logout">Sign Out | {{ user.displayName }}</a>
+            </article>
         </div>
 
     </div>

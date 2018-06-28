@@ -174,3 +174,14 @@
         background: $secondary;
     }
 }
+
+.with-divider {
+
+    .navbar-item {
+        border-left: 1px solid #ebebeb;
+
+        &:last-child {
+            border-right: 1px solid #ebebeb;
+        }
+    }
+}

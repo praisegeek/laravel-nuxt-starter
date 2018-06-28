@@ -1,8 +1,8 @@
 <template>
     <div>
-        <header class="navbar is-fixed-top dashboard-navbar">
-            <div class="container is-fluid">
-                <div class="navbar-brand">
+        <header class="navbar is-fixed-top dashboard-navbar" :class="{'collapsed': collapsed}">
+            <div class="container is-fluid" >
+                <div class="navbar-brand" :class="{'collapsed': collapsed}">
                     <nuxt-link to="#" class="navbar-item">
                         Logo
                     </nuxt-link>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="navbar-menu" id="admin-nav">
                     <div class="navbar-start">
-                        <a href="" class="navbar-item">
+                        <a href="#" @click.prevent="collapse" class="navbar-item">
                             <span class="icon has-text-white">
                                 <i class="fa fa-list"></i>
                             </span>
@@ -27,6 +27,11 @@
                         <nuxt-link to="#" class="navbar-item">
                             <span class="icon with-notification">
                                 <i class="fa fa-bell"></i>
+                            </span>
+                        </nuxt-link>
+                        <nuxt-link to="#" class="navbar-item">
+                            <span class="icon">
+                                <i class="fa fa-inbox"></i>
                             </span>
                         </nuxt-link>
                         <div to="#" class="navbar-item has-dropdown is-hoverable">
@@ -48,74 +53,72 @@
         </header>
 
         <section class="dashboard-body">
-            <div class="columns is-variable is-0">
-                <aside class="column dashboard-body__sidebar">
-                    <div class="menu">
-                        <div class="with-search-input with-border">
-                            <span class="icon">
-                                <i class="fa fa-search"></i>
-                            </span>
-                            <input type="text" class="input" placeholder="Enter search...">
-                        </div>
-                        <p class="menu-label">
-                            Manage
-                        </p>
-                        <ul class="menu-list">
-                            <li>
-                                <nuxt-link to="http://">
-                                    <span class="icon">
-                                        <i class="fa fa-user"></i>
-                                    </span>
-                                    <span>Profile</span>
-                                </nuxt-link>
-                            </li>
-                        </ul>
-
-                        <p class="menu-label">
-                            Admin
-                        </p>
-                        <ul class="menu-list">
-                            <li>
-                                <nuxt-link to="http://">
-                                    <span class="icon">
-                                        <i class="fa fa-map"></i>
-                                    </span>
-                                    <span>Schedules</span>
-                                </nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="http://">
-                                    <span class="icon">
-                                        <i class="fa fa-hand-rock"></i>
-                                    </span>
-                                    <span>Permissions</span>
-                                </nuxt-link>
-                            </li>
-                            <li>
-                                <nuxt-link to="http://">
-                                    <span class="icon">
-                                        <i class="fa fa-rocket"></i>
-                                    </span>
-                                    <span>Export CSV</span>
-                                </nuxt-link>
-                            </li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="menu-footer">
-                        <div class="level">
-                            <div class="level-item">
+            <div class="columns is-variable is-0 is-mobile">
+                <div class="column dashboard-body__sidebar" :class="{'collapsed': collapsed}">
+                    <aside>
+                        <div class="menu">
+                            <div class="with-search-input with-border">
                                 <span class="icon">
-                                    <i class="fa fa-lock"></i>
+                                    <i class="fa fa-search"></i>
                                 </span>
+                                <input type="text" class="input" placeholder="Quick search...">
                             </div>
-                            <a class="level-item">
-                                Sign Out
-                            </a>
+                            <p class="menu-label">
+                                Manage
+                            </p>
+                            <ul class="menu-list">
+                                <li>
+                                    <nuxt-link to="http://">
+                                        <span class="icon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        <span>Profile</span>
+                                    </nuxt-link>
+                                </li>
+                            </ul>
+
+                            <p class="menu-label">
+                                Admin
+                            </p>
+                            <ul class="menu-list">
+                                <li>
+                                    <nuxt-link to="http://">
+                                        <span class="icon">
+                                            <i class="fa fa-map"></i>
+                                        </span>
+                                        <span>Schedules</span>
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="http://">
+                                        <span class="icon">
+                                            <i class="fa fa-hand-rock"></i>
+                                        </span>
+                                        <span>Permissions</span>
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="http://">
+                                        <span class="icon">
+                                            <i class="fa fa-rocket"></i>
+                                        </span>
+                                        <span>Export CSV</span>
+                                    </nuxt-link>
+                                </li>
+                                
+                            </ul>
                         </div>
-                    </div>
-                </aside>
+
+                        <div class="menu-footer">
+                            <div class="has-text-centered">
+                                <!-- <a href="">Logout</a> -->
+                                <a class="icon" @click.prevent="collapse">
+                                    <i class="fa" :class="{'fa-chevron-right': collapsed, 'fa-chevron-left' : !collapsed}"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
                 <div class="column dashboard-body__content">
                     <nuxt></nuxt>
                 </div>
@@ -127,9 +130,17 @@
 <script>
 export default {
   middleware: "auth",
+  data() {
+    return {
+      collapsed: false
+    };
+  },
   methods: {
     logout() {
       this.$auth.logout();
+    },
+    collapse() {
+      this.collapsed = !this.collapsed;
     }
   }
 };

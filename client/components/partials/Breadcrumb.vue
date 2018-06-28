@@ -15,7 +15,6 @@
 
 <script>
 export default {
-  name: "Breadcrumb",
   props: {
     separator: {
       default: "has-succeeds-separator is-small", // has-dot-separator, has-bullet-separator, has-arrow-separator
