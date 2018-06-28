@@ -6,7 +6,7 @@
                     <nuxt-link to="#" class="navbar-item">
                         Logo
                     </nuxt-link>
-                    <span class="navbar-burger burger" data-target="admin-nav">
+                    <span class="navbar-burger burger has-text-light" data-target="admin-nav">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -20,7 +20,7 @@
                             </span>
                         </a>
                         <span class="navbar-item">
-                            LoveworldSAT Admin
+                            LoveworldSAT Portal.
                         </span>
                     </div>
                     <div class="navbar-end">
